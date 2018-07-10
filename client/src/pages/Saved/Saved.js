@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Jumbotron from "../../components/Jumbotron";
 import Card from "../../components/Card";
 import Article from "../../components/Article";
+import Footer from "../../components/Footer";
 import API from "../../utils/API";
 import { Col, Row, Container } from "../../components/Grid";
 import { List } from "../../components/List";
@@ -36,10 +37,10 @@ class Saved extends Component {
           <Col size="md-12">
             <Jumbotron>
               <h1 className="text-center">
-                <strong>NYT Article Scrubber using ReactJS</strong>
+                <strong>NYT Article Search using React JS</strong>
               </h1>
               <h2 className="text-center">
-              Search for and annotate articles of interest
+                Search for and annotate articles
               </h2>
             </Jumbotron>
           </Col>
@@ -68,6 +69,7 @@ class Saved extends Component {
             </Card>
           </Col>
         </Row>
+        <Footer />
       </Container>
     );
   }

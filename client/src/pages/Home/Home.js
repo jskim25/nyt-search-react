@@ -3,6 +3,7 @@ import Jumbotron from "../../components/Jumbotron";
 import Card from "../../components/Card";
 import Form from "../../components/Form";
 import Article from "../../components/Article";
+import Footer from "../../components/Footer";
 import API from "../../utils/API";
 import { Col, Row, Container } from "../../components/Grid";
 import { List } from "../../components/List";
@@ -13,7 +14,7 @@ class Home extends Component {
     q: "",
     start_year: "",
     end_year: "",
-    message: "Search for an article"
+    message: "Search For Articles First"
   };
 
   handleInputChange = event => {
@@ -33,7 +34,7 @@ class Home extends Component {
         this.setState({
           articles: res.data,
           message: !res.data.length
-            ? "No articles found"
+            ? "No New Articles Found"
             : ""
         })
       )
@@ -57,10 +58,10 @@ class Home extends Component {
           <Col size="md-12">
             <Jumbotron>
               <h1 className="text-center">
-                <strong>NYT Article Scrubber using ReactJS</strong>
+                <strong>NYT Article Search Using React JS</strong>
               </h1>
               <h2 className="text-center">
-                Search for and annotate articles of interest
+              Search for and annotate articles
               </h2>
             </Jumbotron>
           </Col>
@@ -99,6 +100,7 @@ class Home extends Component {
             </Card>
           </Col>
         </Row>
+        <Footer />
       </Container>
     );
   }

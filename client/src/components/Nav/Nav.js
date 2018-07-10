@@ -5,7 +5,7 @@ import "./Nav.css";
 const Nav = () => (
   <nav className="navbar navbar-expand-lg navbar-light bg-light">
     <Link className="navbar-brand" to="/">
-      nyt-search-react
+      NYT Search (React JS)
     </Link>
     <button
       className="navbar-toggler"

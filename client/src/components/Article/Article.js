@@ -1,7 +1,8 @@
 import React from "react";
+import formatDate from "../../utils/formatDate";
 import { ListItem } from "../List";
 
-const Article = ({ title, url, _id, handleClick, buttonText, saved }) => (
+const Article = ({ title, url, _id, date, handleClick, buttonText, saved }) => (
   <ListItem>
     <h3>
       <em>{title}</em>{" "}
@@ -19,6 +20,9 @@ const Article = ({ title, url, _id, handleClick, buttonText, saved }) => (
         </button>
       </span>
     </h3>
+    <p>
+      Date {saved ? "Saved" : "Published"}: {formatDate(date)}
+    </p>
   </ListItem>
 );
 
