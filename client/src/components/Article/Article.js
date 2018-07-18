@@ -1,7 +1,7 @@
 import React from "react";
 import { ListItem } from "../List";
 
-const Article = ({ title, url, _id, date, handleClick, buttonText, saved }) => (
+const Article = ({ title, url, _id, handleClick, buttonText, saved }) => (
   <ListItem>
     <h3>
       <em>{title}</em>{" "}
